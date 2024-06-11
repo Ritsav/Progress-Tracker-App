@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:progress_tracker/Components/login_text_field.dart';
-import 'package:progress_tracker/Components/sign_in_btn.dart';
-import 'package:progress_tracker/functions/helper_functions.dart';
+import 'package:progress_tracker/Components/LoginPage/login_text_field.dart';
+import 'package:progress_tracker/Components/LoginPage/sign_in_btn.dart';
+import 'package:progress_tracker/Functions/helper_functions.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});

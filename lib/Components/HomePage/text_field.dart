@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MyTextField extends StatefulWidget {
-  const MyTextField({super.key});
+  final ValueChanged<String> onTextChange;
+  const MyTextField({super.key, required this.onTextChange});
 
   @override
   State<MyTextField> createState() => _MyTextFieldState();
@@ -18,21 +19,22 @@ class _MyTextFieldState extends State<MyTextField> {
         borderRadius: BorderRadius.circular(10),
         border: Border.all(color: Colors.grey),
       ),
-      child: const SingleChildScrollView(
+      child: SingleChildScrollView(
         child: TextField(
           maxLines: null,
           keyboardType: TextInputType.multiline,
           textInputAction: TextInputAction.newline,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 18,
             color: Colors.black87,
             fontWeight: FontWeight.w400,
           ),
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
             hintText: 'Write your notes here...',
             hintStyle: TextStyle(color: Colors.grey),
             border: InputBorder.none,
           ),
+          onChanged: widget.onTextChange, // Call the callback with the new text
         ),
       ),
     );

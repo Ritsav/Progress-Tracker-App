@@ -1,1 +1,38 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"progresstrack-96538","appId":"1:8373978594:android:a129a78940495ed366a5bb","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"progresstrack-96538","configurations":{"android":"1:8373978594:android:a129a78940495ed366a5bb","ios":"1:8373978594:ios:bdd2c63c4eea498f66a5bb"}}}}}}
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "progresstrack-96538",
+          "appId": "1:8373978594:android:a129a78940495ed366a5bb",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "progresstrack-96538",
+          "configurations": {
+            "android": "1:8373978594:android:a129a78940495ed366a5bb",
+            "ios": "1:8373978594:ios:bdd2c63c4eea498f66a5bb"
+          }
+        }
+      }
+    }
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
+      ]
+    }
+  ]
+}
